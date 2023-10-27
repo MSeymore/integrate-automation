@@ -1,11 +1,16 @@
- steps:
- - name: 'node'
-   entrypoint: 'npm'
-   args: ['install']
- - name: 'node'
-   entrypoint: 'npm'
-   args: ['test']
- - name: 'node'
-   entrypoint: 'npm'
-   args: ['run', 'build']
-  #args = arguments
+# This is a Cloud Build configuration file for a Node.js application.
+
+steps:
+- name: "gcr.io/cloud-builders/npm"
+  args: ["install"]
+  # Step to install Node.js dependencies using npm
+
+- name: "gcr.io/cloud-builders/npm"
+  args: ["test"]
+  # Step to run tests for the Node.js application
+
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy"]
+  # Step to deploy the Node.js application to Google App Engine
+
+# You can add more steps as needed for your specific project.
