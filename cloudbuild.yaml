@@ -1,16 +1,14 @@
-# This is a Cloud Build configuration file for a Node.js application.
-
 steps:
 - name: "gcr.io/cloud-builders/npm"
   args: ["install"]
-  # Step to install Node.js dependencies using npm
+  dir: "/workspace/myapp"  # Specify the correct directory where package.json is located
 
 - name: "gcr.io/cloud-builders/npm"
   args: ["test"]
-  # Step to run tests for the Node.js application
+  dir: "/workspace/myapp"  # Make sure to use the same directory for testing
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
-  # Step to deploy the Node.js application to Google App Engine
+  dir: "/workspace/myapp"  # Use the same directory for deploying
 
-# You can add more steps as needed for your specific project.
+# Add other steps as needed
