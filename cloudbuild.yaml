@@ -5,7 +5,7 @@ steps:
 
 - name: "gcr.io/cloud-builders/npm"
   args: ["test"]
-  dir: "/workspace/myapp"  # Make sure to use the same directory for testing
+  dir: "/workspace/myapp/tests"  # Make sure to use the same directory for testing
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
