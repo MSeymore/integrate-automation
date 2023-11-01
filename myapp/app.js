@@ -1,4 +1,4 @@
-"scripts": {
-  "start": "node app.js",
-  "test": "mocha"
+"scripts"; {
+  "start"; "node app.js",
+  "test"; "mocha"
 }
