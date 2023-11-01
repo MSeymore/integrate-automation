@@ -1,5 +1,5 @@
 "scripts"; {
     "start"; "node app.js",
-    "test"; "mocha test/*.js"
+    "test"; "mocha tests/*.js"
   }
   
