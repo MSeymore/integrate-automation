@@ -10,5 +10,8 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
   dir: "/workspace/myapp"  # Use the same directory for deploying
-
+  entrypoint: "bash"  # Use a shell to set the service account
+  env:
+    - 'CLOUDSDK_AUTH_CREDENTIAL_FILE=/path/to/your/credential-file.json'  # Provide the path to your service account key file
+  serviceAccount: 'cloudbuild-sa@my-project-51512-402616.iam.gserviceaccount.com'
 # Add other steps as needed
