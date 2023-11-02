@@ -7,8 +7,11 @@ steps:
   args: ["test"]
   dir: "/workspace/myapp/tests"  # Make sure to use the same directory for testing
 
-- name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy"]
-  dir: "/workspace/myapp"  # Use the same directory for deploying
+- name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
+    env:
+      - 'CLOUDSDK_CORE_PROJECT=my-project-51512-402616'
+    dir: '/workspace/myapp'
+    serviceAccount: 'cloudbuild-sa@my-project-51512-402616.iam.gserviceaccount.com'
 
 # Add other steps as needed
