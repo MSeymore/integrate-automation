@@ -9,6 +9,6 @@ steps:
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
-  dir: "/workspace/myapp"  # Use the same directory for deploying
+  dir: "/workspace"  # Use the same directory for deploying
 
 # Add other steps as needed
