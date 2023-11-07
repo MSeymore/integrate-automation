@@ -8,7 +8,7 @@ steps:
   dir: "/workspace/myapp/tests"  # Make sure to use the same directory for testing
 
 - name: "gcr.io/cloud-builders/gcloud"
-  entrypoint: "bash"
+  #entrypoint: "bash"
   args: ["app", "deploy"]
   dir: "/integrate-automation/myapp"  # Use the same directory for deploying
   #entrypoint: "bash"  # Use a shell to set the service account
