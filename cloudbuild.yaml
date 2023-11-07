@@ -9,7 +9,7 @@ steps:
 
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
-  dir: "/integrate-automation/myapp"  # Use the same directory for deploying
+  dir: "/integrate-automation/myapp/app.yaml"  # Use the same directory for deploying
   #entrypoint: "bash"  # Use a shell to set the service account
 # env:
 #   - 'CLOUDSDK_AUTH_CREDENTIAL_FILE=/Users/mseymore/Downloads/my-project-51512-402616-c1d95c76c145.json'  # Provide the path to your service account key file
