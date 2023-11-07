@@ -2,7 +2,7 @@ runtime: nodejs
 env: flex
 
 handlers:
-- url: .*
+- url: /.*
   script: auto
 
 automatic_scaling:
