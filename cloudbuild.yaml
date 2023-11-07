@@ -10,13 +10,4 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
   dir: "/integrate-automation/myapp"  # Use the same directory for deploying
-  #entrypoint: "bash"  # Use a shell to set the service account
-# env:
-#   - 'CLOUDSDK_AUTH_CREDENTIAL_FILE=/Users/mseymore/Downloads/my-project-51512-402616-c1d95c76c145.json'  # Provide the path to your service account key file
-# serviceAccount: 'clloudbuild-sa@my-project-51512-402616.iam.gserviceaccount.com'
-# Add other steps as needed
-
-- #name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-- #entrypoint: "bash"
-- #args: ["-c", "gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy"]
-#timeout: "1600s"
+ 
