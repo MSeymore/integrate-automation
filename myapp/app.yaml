@@ -5,8 +5,8 @@ handlers:
 - url: .*
   script: auto
 
-#automatic_scaling:
-#  min_num_instances: 1
-#  max_num_instances: 10
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 3
 
-#service_account: your-service-account@your-project.iam.gserviceaccount.com
+service_account: clloudbuild-sa@my-project-51512-402616.iam.gserviceaccount.com
