@@ -1,6 +1,12 @@
 runtime: nodejs
-env: flex
+env: standard
 
 handlers:
 - url: .*
   script: auto
+
+#automatic_scaling:
+#  min_num_instances: 1
+#  max_num_instances: 10
+
+#service_account: your-service-account@your-project.iam.gserviceaccount.com
